@@ -85,7 +85,7 @@ function launchBoard(config) {
 
   // Place Player 1 models in their deployment zone
   const p1Chars = p1Names.map(n => allChars.find(c => c.name === n)).filter(Boolean);
-  const p1Positions = distributeInZone(deployZones.p1, p1Chars.length, boardW, boardH);
+  const p1Positions = distributeInZone(deployZones.p1, p1Chars, boardW, boardH);
   p1Chars.forEach((charData, i) => {
     const model = new ModelEntity(charData, 'player1', p1Positions[i].x, p1Positions[i].y);
     models.push(model);
@@ -93,7 +93,7 @@ function launchBoard(config) {
 
   // Place Player 2 models in their deployment zone
   const p2Chars = p2Names.map(n => allChars.find(c => c.name === n)).filter(Boolean);
-  const p2Positions = distributeInZone(deployZones.p2, p2Chars.length, boardW, boardH);
+  const p2Positions = distributeInZone(deployZones.p2, p2Chars, boardW, boardH);
   p2Chars.forEach((charData, i) => {
     const model = new ModelEntity(charData, 'player2', p2Positions[i].x, p2Positions[i].y);
     models.push(model);
