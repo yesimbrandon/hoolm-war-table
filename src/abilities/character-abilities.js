@@ -21,7 +21,12 @@ export function hasCustomAbilities(model) {
 export function executeAbility(abilityName, model, boardCanvas, onRefreshSidePanel) {
   const name = abilityName.toLowerCase();
 
-  if (name.includes('next illusion')) {
+  if (abilityName.startsWith('transform_to:')) {
+    const targetName = abilityName.slice('transform_to:'.length).trim();
+    transformModelInto(model, targetName, boardCanvas, onRefreshSidePanel);
+  } else if (name === 'revert_transform') {
+    revertTransformedModel(model, boardCanvas, onRefreshSidePanel);
+  } else if (name.includes('next illusion')) {
     castAndForMyNextIllusion(model, boardCanvas, onRefreshSidePanel);
   } else if (name.includes('assign token') || name.includes('house of mirrors') || name.includes('reveal token')) {
     openTokenAssignmentModal(model, boardCanvas, onRefreshSidePanel);
@@ -32,6 +37,57 @@ export function executeAbility(abilityName, model, boardCanvas, onRefreshSidePan
   } else if (name.includes('eject') || name.includes('revert')) {
     ejectDreadnoughtToBravo1(model, boardCanvas, onRefreshSidePanel);
   }
+}
+
+/**
+ * Generic character transformation into any linkedCharacter / linkedCharacters form
+ * (e.g., Bravo 1 -> Dreadnought, or Gemini Twins -> Twin Form A / Twin Form B)
+ */
+export function transformModelInto(sourceModel, targetCharName, boardCanvas, onRefreshSidePanel) {
+  const allChars = getCharacters();
+  const targetData = allChars.find(c => c.name.toLowerCase() === targetCharName.toLowerCase());
+
+  if (!targetData) {
+    alert(`Transform character "${targetCharName}" not found in characters.json!`);
+    return;
+  }
+
+  sourceModel.thresholdUsed = true;
+  const savedHp = sourceModel.hp;
+  const savedX = sourceModel.x;
+  const savedY = sourceModel.y;
+
+  boardCanvas.removeModel(sourceModel.id);
+
+  const transformed = new ModelEntity(targetData, sourceModel.team, savedX, savedY);
+  transformed.ap = transformed.maxAp;
+  transformed.activated = false;
+  // Preserve root original model so multi-form or revert always remembers the original hero
+  transformed.storedOriginalModel = sourceModel.storedOriginalModel || sourceModel;
+  transformed.savedOriginalHp = sourceModel.savedOriginalHp ?? (savedHp > 0 ? savedHp : sourceModel.maxHp);
+  // Keep Bravo 1 properties for backwards compatibility
+  transformed.storedBravoModel = transformed.storedOriginalModel;
+  transformed.savedBravoHp = transformed.savedOriginalHp;
+
+  boardCanvas.addModel(transformed);
+  boardCanvas.selectModel(transformed);
+
+  onRefreshSidePanel?.();
+}
+
+export function revertTransformedModel(currentModel, boardCanvas, onRefreshSidePanel) {
+  const orig = currentModel.storedOriginalModel || currentModel.storedBravoModel;
+  if (!orig) return;
+
+  boardCanvas.removeModel(currentModel.id);
+  orig.x = currentModel.x;
+  orig.y = currentModel.y;
+  orig.hp = currentModel.savedOriginalHp || currentModel.savedBravoHp || orig.maxHp;
+  orig.alive = true;
+
+  boardCanvas.addModel(orig);
+  boardCanvas.selectModel(orig);
+  onRefreshSidePanel?.();
 }
 
 /**

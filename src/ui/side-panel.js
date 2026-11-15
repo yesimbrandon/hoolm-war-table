@@ -3,7 +3,7 @@
  */
 
 import { getGlossary } from '../data/data-loader.js';
-import { executeAbility, ejectDreadnoughtToBravo1 } from '../abilities/character-abilities.js';
+import { executeAbility, ejectDreadnoughtToBravo1, transformModelInto } from '../abilities/character-abilities.js';
 import { network } from '../network/network-manager.js';
 
 export class SidePanel {
@@ -77,12 +77,35 @@ export class SidePanel {
       </div>
     `;
 
-    // Dreadnought linked model banner
-    if (m.storedBravoModel) {
+    // Transformed model banner (e.g. Dreadnought -> Bravo 1, or Gemini Twin Form -> Original)
+    const origModel = m.storedOriginalModel || m.storedBravoModel;
+    const savedHp = m.savedOriginalHp ?? m.savedBravoHp;
+    if (origModel) {
       html += `
         <div style="margin-bottom:12px; padding:8px 12px; border-radius:8px; background:rgba(233,69,96,0.12); border:1px solid rgba(233,69,96,0.3); font-size:12px; font-weight:700; color:var(--primary); display:flex; justify-content:space-between; align-items:center;">
-          <span>🤖 Replaced Bravo 1 (Saved HP: ${m.savedBravoHp})</span>
-          <button class="ability-action-btn" data-execute-ability="eject" style="margin:0; padding:2px 8px; font-size:10px; border-color:var(--primary); color:var(--primary);">Eject</button>
+          <span>🔄 Transformed from ${origModel.name} (Saved HP: ${savedHp})</span>
+          <button class="ability-action-btn" data-execute-ability="revert_transform" style="margin:0; padding:2px 8px; font-size:10px; border-color:var(--primary); color:var(--primary);">Revert</button>
+        </div>
+      `;
+    }
+
+    // Linked / Multi-Form Transform selector (e.g. Bravo 1 -> Dreadnought, or Gemini Twins -> 1 of 2 forms)
+    const transformTargets = (m.linkedCharacters || []).filter(
+      name => name.toLowerCase() !== m.name.toLowerCase()
+    );
+    if (transformTargets.length > 0) {
+      html += `
+        <div style="margin-bottom:12px; padding:10px 12px; border-radius:8px; background:rgba(255,193,7,0.1); border:1px solid rgba(255,193,7,0.35);">
+          <div style="font-size:10px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">
+            ${transformTargets.length > 1 ? '⚡ Choose Transform Form' : '⚡ Transform Available'}
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            ${transformTargets.map(targetName => `
+              <button class="ability-action-btn" data-execute-ability="transform_to:${targetName}" style="margin:0; padding:5px 10px; font-size:11px; border-color:var(--gold); color:var(--gold);">
+                ⇄ Transform into ${targetName}
+              </button>
+            `).join('')}
+          </div>
         </div>
       `;
     }
@@ -231,8 +254,13 @@ export class SidePanel {
           if (m.hp <= 0) {
             m.alive = false;
             // If Dreadnought dies, trigger ejection back to Bravo 1!
-            if (m.storedBravoModel) {
+            if (m.storedBravoModel && m.name.toLowerCase().includes('dreadnought')) {
               ejectDreadnoughtToBravo1(m, this.boardCanvas, () => this.refresh());
+              return;
+            }
+            // If a multi-form character (e.g. Gemini Twins) hits 0 HP, prompt which form to transform into!
+            if (m.linkedCharacters && m.linkedCharacters.length > 1) {
+              this._openMultiTransformModal(m);
               return;
             }
           } else {
@@ -416,5 +444,51 @@ export class SidePanel {
   _isDebuff(glossaryEntry) {
     const debuffTerms = ['fear', 'bleed', 'daze', 'poison', 'knockdown', 'slow', 'stun', 'stagger', 'grievous wounds'];
     return debuffTerms.includes(glossaryEntry.term.toLowerCase());
+  }
+
+  _openMultiTransformModal(model) {
+    const targets = model.linkedCharacters || [];
+    if (!targets.length) return;
+
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+      position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.85);
+      display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px);
+    `;
+    modal.innerHTML = `
+      <div style="background:var(--surface); border:1px solid var(--gold); border-radius:12px; padding:24px; width:440px; max-width:90vw; text-align:center;">
+        <h3 style="font-family:var(--font-heading); font-size:20px; font-weight:800; color:var(--gold); margin-bottom:8px;">⚡ ${model.name} Defeated — Transform!</h3>
+        <p style="color:var(--text-secondary); font-size:13px; margin-bottom:20px;">Choose which linked character form <b>${model.name}</b> transforms into (or leave defeated):</p>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+          ${targets.map(tName => `
+            <button class="multi-transform-btn" data-target="${tName}" style="padding:12px; border-radius:8px; border:2px solid var(--gold); background:var(--surface-elevated); color:var(--gold); font-family:var(--font-heading); font-size:14px; font-weight:700; cursor:pointer;">
+              ⇄ Transform into ${tName}
+            </button>
+          `).join('')}
+        </div>
+        <button id="btn-skip-transform" style="padding:10px 18px; border-radius:8px; border:1px solid var(--border); background:var(--surface-elevated); color:var(--text-secondary); font-weight:600; cursor:pointer;">
+          Stay Defeated (No Transform)
+        </button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.querySelectorAll('.multi-transform-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetName = btn.dataset.target;
+        modal.remove();
+        transformModelInto(model, targetName, this.boardCanvas, () => {
+          this.refresh();
+          this.onModelUpdated?.(this.currentModel);
+        });
+      });
+    });
+
+    modal.querySelector('#btn-skip-transform')?.addEventListener('click', () => {
+      modal.remove();
+      this._renderContent();
+      this._emitModelUpdate(model);
+      this.onModelUpdated?.(model);
+    });
   }
 }

@@ -53,8 +53,14 @@ export class ModelEntity {
     this.threshold = charData.threshold || null;
     this.thresholdUsed = false;
 
-    // Linked character (transforms)
-    this.linkedCharacter = charData.linkedCharacter || null;
+    // Linked character(s) (supports 1 or multiple transform forms, e.g. Gemini Twins)
+    const rawLinks = Array.isArray(charData.linkedCharacters)
+      ? charData.linkedCharacters
+      : charData.linkedCharacter
+        ? String(charData.linkedCharacter).split(',')
+        : [];
+    this.linkedCharacters = rawLinks.map(s => String(s).trim()).filter(Boolean);
+    this.linkedCharacter = this.linkedCharacters[0] || null;
     this.isTransformOnly = charData.isTransformOnly || false;
 
     // Slaying reward
