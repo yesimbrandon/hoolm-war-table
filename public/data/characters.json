@@ -1,0 +1,1629 @@
+{
+	"characters": [
+		{
+			"name": "Monsieur Le Beau",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Fearless"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "The Prestige",
+				"value": "Remove all Monsieur Le Beau illusion models from play. For each model removed, gain +1 ATK on melee attacks for the rest of the activation."
+			},
+			"speed": 7,
+			"defense": 13,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 0,
+			"actionPoints": 7,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Cane Sword (m2)",
+					"type": "Attack",
+					"range": "M2",
+					"damage": 10,
+					"cost": "1 AP"
+				},
+				{
+					"name": "Boutonnière",
+					"type": "Attack",
+					"range": "B8",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "Crit [Fear]"
+				},
+				{
+					"name": "And for my next illusion...",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place up to two total Illusion models. Assign Tokens."
+				},
+				{
+					"name": "Master Illusionist",
+					"type": "Static",
+					"value": "This model and all illusions must be within 3\" of each other. Movement originates from the real Le Beau. After moving, Assign tokens. Attacks can be made from any Monsieur Le Beau model/illusion. There can only be 2 friendly “illusion” models in play at any time."
+				},
+				{
+					"name": "House of Mirrors",
+					"type": "Static",
+					"value": "When this model is attacked, reveal tokens. If the target was an illusion, remove it from play, the real Le Beau can be placed within two inches of its current location. If the illusion was targeted by a melee attack, the attacker suffers an ATK 9. If the real Le Beau was the target of the attack, resolve the attack normally. After the attack is resolved, Assign Tokens."
+				},
+				{
+					"name": "Assign Tokens",
+					"type": "Static",
+					"value": "Assign the real token to one model, and illusion to any remaining face down."
+				}
+			]
+		},
+		{
+			"name": "Dukahn",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Fearless"
+			],
+			"base": "65mm",
+			"threshold": {
+				"name": "Ritual of Undeath",
+				"value": "When the apprentice would die, remove the phylactery token and any activation tokens, it becomes indestructible. At the end of it's next activation remove it from play. It may spend ritual tokens as AP."
+			},
+			"speed": 6,
+			"defense": 12,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 2,
+			"actionPoints": 7,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Spectral Plague",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 9,
+					"cost": "1 AP",
+					"value": "If this attack deals damage to a demigod you may choose an enemy model within 3 inches of the target. That model also suffers the same amount of damage"
+				},
+				{
+					"name": "Gravecaller",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "[Innocuous]. If the target model hit is at or below 5 HP It dies."
+				},
+				{
+					"name": "Only I shall not die",
+					"type": "Static",
+					"value": "Enemy models within 3 inches of this model cannot have damage removed from them."
+				},
+				{
+					"name": "Dark Apprentice",
+					"type": "Static",
+					"value": "Before the game begins but after teams are chosen, pick a friendly demigod that is not this model and assign the phylactery token to it. That model is the apprentice. When the apprentice damages an enemy model with an attack, place 1 ritual token on it. It can never have more than 5 ritual tokens. While the apprentice is in play, This model cannot be destroyed. When this model is dealt lethal damage it remains in play at 0 HP. While this model is at 0 HP, any damage that would be dealt to it is instead dealt to the apprentice."
+				},
+				{
+					"name": "Malefic Transference",
+					"type": "Static",
+					"value": "When this model takes damage from an enemy attack, you may remove a ritual token from the apprentice. If you do, all damage and effects resulting from the enemy attack is transferred to the apprentice."
+				},
+				{
+					"name": "Arcane Symbiosis",
+					"type": "Static",
+					"value": "When this model casts a spell it may use the apprentice as the spells point of origin. Additionally, when this model casts a spell it may spend a ritual token on the apprentice to get advantage on the attack roll."
+				}
+			]
+		},
+		{
+			"name": "Admiral Dredgemoore",
+			"class": [
+				"DPS"
+			],
+			"attributes": [],
+			"base": "65mm",
+			"threshold": {
+				"name": "Pillage and Plunder",
+				"value": "If this model does not roll a critical hit during its activation, the next time this model makes an attack, the attack automatically hits and is considered a critical hit."
+			},
+			"speed": 5,
+			"defense": 10,
+			"health": 22,
+			"armor": 2,
+			"magicResist": 0,
+			"actionPoints": 5,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Hook Shot",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 5,
+					"cost": "1 AP",
+					"value": "[Innocuous] When an enemy model is hit with this weapon you may place this model anywhere base to base with the model hit. After this model is placed, it may make 1 attack with Hearts Abyss without spending AP. If the hook shot resulted in a critical hit, this model may make 2 Hearts Abyss attacks without spending AP"
+				},
+				{
+					"name": "Hearts Abyss",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 6,
+					"cost": "1 AP",
+					"value": "Crit [Brutal]. [Pierce]"
+				},
+				{
+					"name": "Doubloon",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "This model gains Advantage on attacks made with Hearts Abyss."
+				},
+				{
+					"name": "Parley",
+					"type": "Static",
+					"value": "This model cannot be targeted by enemy models unless they are base to base with this model."
+				}
+			]
+		},
+		{
+			"name": "Ezria",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Stealth"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "Soul Bomb",
+				"value": "When this model dies, enemy models within 3\" take an atk 7 dmg roll and add 1 damage for each AP on this model at the time of its death. Models damaged by Soul Bomb recover one less AP at the begining of their next activation."
+			},
+			"speed": 6,
+			"defense": 12,
+			"health": 25,
+			"armor": 0,
+			"magicResist": 0,
+			"actionPoints": 5,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Blackmoon",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 9,
+					"cost": "1 AP",
+					"value": "If this weapon hits an enemy demigod, the next time that model spends AP, double the amount spent."
+				},
+				{
+					"name": "Manipulate Will",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "When this spell damages an enemy demigod, this model can add or remove 1 AP from the damaged model."
+				},
+				{
+					"name": "Ghastly Visage",
+					"type": "Static",
+					"value": "Melee attacks made against this model have disadvantage"
+				},
+				{
+					"name": "Phase Shift",
+					"type": "Static",
+					"value": "This model can advance through obstructions and other models as long as it has enough movement to move completely past them."
+				},
+				{
+					"name": "Devour Soul",
+					"type": "Static",
+					"value": "When this model destroys another model, it gains 1 AP."
+				},
+				{
+					"name": "Soul Carapace",
+					"type": "Static",
+					"value": "When this model is targeted by an enemy spell it can spend 1AP to negate the spell."
+				}
+			]
+		},
+		{
+			"name": "Melgar, The Frozen Anchor",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Steadfast",
+				"Anchored"
+			],
+			"base": "65mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "If this model is within a friendly permafrost template and there are 3 friendly permafrost templates in play this model may cast Basal Slide without spending AP. If it does, prior to placing the model in the next permafrost template Resorb the template on which this model is currently standing. Repeat this process until there are no friendly permafrost templates in play."
+			},
+			"speed": 4,
+			"defense": 12,
+			"health": 25,
+			"armor": 0,
+			"magicResist": 0,
+			"actionPoints": 6,
+			"recovery": 3,
+			"abilities": [
+				{
+					"name": "Terminus",
+					"type": "Attack",
+					"range": "M2",
+					"damage": 9,
+					"cost": "1 AP",
+					"value": "Crit [Knockdown]"
+				},
+				{
+					"name": "Frost Mortar",
+					"type": "Attack",
+					"range": "R8",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "On hit, you may remove an ice token and place a permafrost template anywhere base to base with the target."
+				},
+				{
+					"name": "Basal Slide",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "If this model is within a friendly permafrost template it can be placed within any friendly permafrost template on the table. After this model is placed it may make one melee attack against an enemy model without spending AP."
+				},
+				{
+					"name": "Permafrost",
+					"type": "Static",
+					"value": "This model may spend an ice token to center a 3” permafrost template on it. While within the AOE, this model gains +1 DEF. There can be a maximum of 3 friendly permafrost templates in play at any time."
+				},
+				{
+					"name": "Rime Skin",
+					"type": "Static",
+					"value": "This model starts the game with 3 ice tokens. This model gains +1 ATK for each ice token currently on it. This model can never have more than 3 ice tokens at any time."
+				},
+				{
+					"name": "Resorb",
+					"type": "Static",
+					"value": "If this model is within a friendly permafrost template,you may choose to remove the template from play and gain 1 ice token."
+				}
+			]
+		},
+		{
+			"name": "Sable",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Stealth"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "The Perfect Round",
+				"value": "If this model has made a successful attack with each ammo type they can craft the Perfect Round for the rest of the game. The Perfect Round has all three ammo types."
+			},
+			"speed": 5,
+			"defense": 15,
+			"health": 18,
+			"armor": 0,
+			"magicResist": 0,
+			"actionPoints": 6,
+			"recovery": 3,
+			"abilities": [
+				{
+					"name": "Deadeye",
+					"type": "Attack",
+					"range": "R12",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "Crit [Grievous Wounds]. [Sentry]"
+				},
+				{
+					"name": "Night Vision",
+					"type": "Static",
+					"value": "This model ignores [Stealth]."
+				},
+				{
+					"name": "Steady. Aim. Fire!",
+					"type": "Static",
+					"value": "Until this model makes a move action durings its activation it gains +1 ATK."
+				},
+				{
+					"name": "Unstoppable",
+					"type": "Static",
+					"value": "Attacks using the High Velocity round that hit the target, pass directly through the target hitting any and all models in a direct line. This does not pass through blocking terrain."
+				},
+				{
+					"name": "Mastercrafter",
+					"type": "Static",
+					"value": "Each time an attack is made with Deadeye, choose the ammo type. High Velocity: +1 ATK [Ricochet 3] Armor Piercing: Ignores AR"
+				}
+			]
+		},
+		{
+			"name": "Bloodbagne",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Stealth"
+			],
+			"base": "65mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "This model always rolls at advantage against bleeding targets."
+			},
+			"speed": 8,
+			"defense": 14,
+			"health": 25,
+			"armor": 0,
+			"magicResist": 0,
+			"actionPoints": 6,
+			"recovery": 3,
+			"abilities": [
+				{
+					"name": "Bite",
+					"type": "Attack",
+					"range": "B2B",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "Place this model anywhere within 4 in and make 1 attack. [Bleed]"
+				},
+				{
+					"name": "Claws",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 10,
+					"cost": "1 AP",
+					"value": "Crit [Grievous Wounds]"
+				},
+				{
+					"name": "Compulsion",
+					"type": "Spell",
+					"range": "B2B",
+					"cost": "1 AP",
+					"value": "Gain control of target enemy demigod. You may move it up to its move speed and make 1 basic attack."
+				},
+				{
+					"name": "Pack Hunter",
+					"type": "Static",
+					"value": "Other friendly models gain +2 (M)ATK while the target is in melee range of this model"
+				},
+				{
+					"name": "Vampiric Speed",
+					"type": "Static",
+					"value": "This model gains +2 def against melee attacks"
+				},
+				{
+					"name": "Vampiric Blood",
+					"type": "Static",
+					"value": "This model heals for 3 damage and may shake any status effects at the beginning of each round"
+				}
+			]
+		},
+		{
+			"name": "Bravo 1",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Immunity stun"
+			],
+			"base": "50mm",
+			"linkedCharacter": "Dreadnought",
+			"threshold": {
+				"name": "How about we even the odds",
+				"value": "When a friendly model dies, if it was not the first friendly to fall you can even the odds. All status effects expire and replace this model with Dreadnought. Enemy models within 2 inches when Dreadnought is placed suffers 2 damage. Dreadnought enters the game with its full AP value and no activation token."
+			},
+			"speed": 5,
+			"defense": 12,
+			"health": 25,
+			"armor": 2,
+			"magicResist": 0,
+			"actionPoints": 6,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Krav Maga",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 9,
+					"cost": "1 AP"
+				},
+				{
+					"name": "Spray n Pray",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 6,
+					"cost": "1 AP",
+					"value": "[Brutal]"
+				},
+				{
+					"name": "Grenade Launcher",
+					"type": "Attack",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "Each time an attack is made with Grenade Launcher, choose the ammo type. Flashbang: [Innocuous]; [Explode 2] - Enemy models hit suffer [Stun] Grenade: [Explode 2] - Models damaged suffer [Grievous Wounds] Tear Gas - [Explode 2] - Models hit suffer [Poison]"
+				}
+			]
+		},
+		{
+			"name": "Dreadnought",
+			"class": [
+				"DPS"
+			],
+			"attributes": [],
+			"base": "80mm",
+			"linkedCharacter": "Bravo 1",
+			"isTransformOnly": true,
+			"threshold": {
+				"name": "How about we even the odds",
+				"value": "Replaced Bravo 1 when a friendly model fell."
+			},
+			"speed": 5,
+			"defense": 11,
+			"health": 25,
+			"armor": 4,
+			"magicResist": 0,
+			"actionPoints": 5,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Kraber",
+					"type": "Attack",
+					"range": "R14",
+					"damage": 14,
+					"cost": "1 AP",
+					"value": "[Regulated]"
+				},
+				{
+					"name": "ATGM - Anti Tank Guided Missile",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "This attack can only target models of the class 'Tank'. [Pierce]"
+				},
+				{
+					"name": "Cover Fire",
+					"type": "Attack",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "Target three enemy models and make ATK rolls against each. When this ATK is boosted all atk rolls are boosted"
+				},
+				{
+					"name": "Shock N' Awe",
+					"type": "Attack",
+					"range": "M2",
+					"damage": 10,
+					"cost": "1 AP",
+					"value": "[Fracture]"
+				},
+				{
+					"name": "Backup Power",
+					"type": "Static",
+					"value": "When this model activiates it may shake one status effect without spending AP"
+				},
+				{
+					"name": "Self Destruct Protocol",
+					"type": "Static",
+					"value": "When this model takes lethal damage it explodes causing models within 2D6 inches to take D6 damage."
+				}
+			]
+		},
+		{
+			"name": "Necromancer",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Immunity Dark Magic",
+				"Fearless"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "No threshold ability specified."
+			},
+			"speed": 7,
+			"defense": 14,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 3,
+			"actionPoints": 7,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Shadow Blast",
+					"type": "Attack",
+					"range": "R12",
+					"damage": 9,
+					"cost": "1 AP",
+					"value": "[Dark Magic]"
+				},
+				{
+					"name": "Molecular Dispersion",
+					"type": "Attack",
+					"range": "R8",
+					"damage": 10,
+					"cost": "1 AP",
+					"value": "Crit [Stun]"
+				},
+				{
+					"name": "Telepathy",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "[Innocuous]. When this attack hits an enemy model you can make an attack with that model without spending AP"
+				},
+				{
+					"name": "Teleportation",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place this model anywhere within 5 inches"
+				},
+				{
+					"name": "Marked for Death (Aura)",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 6,
+					"cost": "1 AP",
+					"value": "During the target models next activation it immediately takes 5 damage. If this aura is removed that model suffers 3 damage. Only one instance of this aura can be active at a time"
+				},
+				{
+					"name": "Misotheism",
+					"type": "Static",
+					"value": "This model is always boosted against Gods without spending AP"
+				},
+				{
+					"name": "Necromancy",
+					"type": "Static",
+					"value": "When a friendly model dies within 10 inches of this model they can make one attack before being removed from the game"
+				},
+				{
+					"name": "Temporal Stasis",
+					"type": "Static",
+					"value": "This model can boost after the roll"
+				}
+			]
+		},
+		{
+			"name": "Void",
+			"class": [
+				"DPS"
+			],
+			"attributes": [
+				"Immunity: Dark Magic",
+				"Fear"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "Inevitable",
+				"value": "When this model activates if it is during the 3rd round it gains +3 ATK and recovers up to its full AP allocation"
+			},
+			"speed": "Special*",
+			"defense": 14,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 3,
+			"actionPoints": 7,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Shadow Blast",
+					"type": "Spell",
+					"range": "R12",
+					"damage": 9,
+					"cost": "1 AP",
+					"value": "[Dark Magic]"
+				},
+				{
+					"name": "Molecular Dispersion",
+					"type": "Attack",
+					"range": "R8",
+					"damage": 10,
+					"cost": "1 AP",
+					"value": "Crit [Stun]"
+				},
+				{
+					"name": "Telepathy",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "[Innocuous]. When this attack hits an enemy demigod you can make an attack with that model without spending AP"
+				},
+				{
+					"name": "Teleportation",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place this model anywhere within 6 inches"
+				},
+				{
+					"name": "Marked for Death (Aura2)",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "[Innocuous]. At the beginning of the target demigod's next activation it immediately takes 5 damage. If this aura is removed that model suffers 3 damage"
+				},
+				{
+					"name": "Misotheism",
+					"type": "Static",
+					"value": "This model is always boosted against Titans without spending AP"
+				},
+				{
+					"name": "Necromancy",
+					"type": "Static",
+					"value": "When a friendly demigod dies within 10 inches of this model they can make one basic attack before being removed from the game."
+				},
+				{
+					"name": "Temporal Stasis",
+					"type": "Static",
+					"value": "This model can boost after the roll."
+				}
+			]
+		},
+		{
+			"name": "Detritus",
+			"class": [
+				"Tank",
+				"Support"
+			],
+			"attributes": [
+				"Anchored",
+				"Immunity: Poison"
+			],
+			"base": "80mm",
+			"threshold": {
+				"name": "Reclamation",
+				"value": "When a demigod within a compost pile is destroyed you may place this model within the compost pile. This model immediately replenishes its REC."
+			},
+			"speed": 4,
+			"defense": 10,
+			"health": 30,
+			"armor": 3,
+			"magicResist": 2,
+			"actionPoints": 6,
+			"recovery": 3,
+			"abilities": [
+				{
+					"name": "Stomp",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 8,
+					"cost": "1 AP"
+				},
+				{
+					"name": "Chomp",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 9,
+					"cost": "1 AP"
+				},
+				{
+					"name": "Root Rot",
+					"type": "Attack",
+					"range": "R6",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "[Poison]"
+				},
+				{
+					"name": "Compost Pile",
+					"type": "Static",
+					"value": "Creates compost pile terrain templates on activation."
+				}
+			]
+		},
+		{
+			"name": "Belfry",
+			"class": [
+				"Tank",
+				"DPS"
+			],
+			"attributes": [
+				"Immunity: Fear",
+				"Flying"
+			],
+			"base": "80mm",
+			"threshold": {
+				"name": "Massacre",
+				"value": "If this model has 3 rage tokens and an activation token, remove the activation token on this model and gain its REC up to its AP."
+			},
+			"speed": 5,
+			"defense": 10,
+			"health": 45,
+			"armor": 4,
+			"magicResist": 2,
+			"actionPoints": 6,
+			"recovery": 3,
+			"abilities": [
+				{
+					"name": "Razor Wings",
+					"type": "Attack",
+					"range": "M3",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "Crit [Bleed]"
+				},
+				{
+					"name": "Abomination",
+					"type": "Static",
+					"value": "This model has [Taunt]"
+				},
+				{
+					"name": "Blood Frenzy",
+					"type": "Static",
+					"value": "When this model takes damage, it gains a rage token. This model gains +1 ATK for each rage token. This model can have up to 3 rage tokens."
+				},
+				{
+					"name": "Echolocation",
+					"type": "Static",
+					"value": "Enemy models within 8” of this model lose [Stealth]"
+				},
+				{
+					"name": "Rundown",
+					"type": "Static",
+					"value": "[Onslaught]"
+				}
+			]
+		},
+		{
+			"name": "Gemini Twins",
+			"class": [
+				"DPS",
+				"Support"
+			],
+			"attributes": [],
+			"base": "65mm",
+			"threshold": {
+				"name": "The Merge",
+				"value": "If this model would take lethal damage instead roll a D6. On a 1-3 replace this model with Gemini 1 and 4-6 with Gemini 2."
+			},
+			"speed": 7,
+			"defense": 14,
+			"health": 15,
+			"armor": 0,
+			"magicResist": 2,
+			"actionPoints": 8,
+			"recovery": 5,
+			"abilities": [
+				{
+					"name": "Two is better than one",
+					"type": "Spell",
+					"range": "R12",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "Roll 4 dice, drop the lowest. This spell cannot be boosted or at advanatge"
+				},
+				{
+					"name": "On the same page",
+					"type": "Spell",
+					"range": "R10",
+					"damage": 10,
+					"cost": "1 AP",
+					"value": "Target two enemy models and make ATK rolls against each. When this ATK is boosted both atk rolls are boosted"
+				},
+				{
+					"name": "Prison World (Aura)",
+					"type": "Spell",
+					"range": "R8",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "[Innocuous]. If an enemy demigod is hit they are phased until the the end of the round. This aura cost double the AP to remove with class advantages"
+				},
+				{
+					"name": "Siphon",
+					"type": "Static",
+					"value": "If this model activates b2b with a friendly Demigod they get +1 ATK"
+				},
+				{
+					"name": "Power of the Covern",
+					"type": "Static",
+					"value": "If this model were to gain an AP from any source other than their REC they gain 1 more."
+				},
+				{
+					"name": "Help from the other side",
+					"type": "Static",
+					"value": "When this model activates they can remove one status effect for each friendly Demigod that has died."
+				}
+			]
+		},
+		{
+			"name": "Jade and Quarry",
+			"class": [
+				"Tank",
+				"Support"
+			],
+			"attributes": [
+				"Anchored"
+			],
+			"base": "80mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "When a Stonehold is destroyed you may remove any number of Geo Blossom models from the table. Target enemy model within 3 inches of the removed model suffers an ATK 8 combat roll."
+			},
+			"speed": 4,
+			"defense": 8,
+			"health": 30,
+			"armor": 2,
+			"magicResist": 2,
+			"actionPoints": 6,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Rockslide",
+					"type": "Attack",
+					"range": "B8",
+					"damage": 6,
+					"cost": "1 AP",
+					"value": "[Slow]"
+				},
+				{
+					"name": "Crush",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "crit [Daze]"
+				},
+				{
+					"name": "Stonehold",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place a Stonehold token on a demigod and it cannot move, be targeted by attacks or spells."
+				},
+				{
+					"name": "Geo Blossoms",
+					"type": "Spell",
+					"cost": "2 AP",
+					"value": "Place up to 3 Geo Blossom models in play anywhere within 8\" of this model. These models are friendly terrain obstructions that have DEF 5 | AR 10 | HP 1 and have Lodestone and Tectonic Shift. If a Geo Blossom model is destroyed by an enemy attack while within 3\" of a Stonehold model, the Stonehold Model gets +1 AR until the end of the round."
+				}
+			]
+		},
+		{
+			"name": "Minotaur",
+			"class": [
+				"Tank"
+			],
+			"attributes": [
+				"Anchored",
+				"Unbreakable"
+			],
+			"base": "80mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "If an enemy model ends a move action within 8 inches of this model it can immediately cast Stampede without spending AP."
+			},
+			"speed": 4,
+			"defense": 10,
+			"health": 40,
+			"armor": 3,
+			"magicResist": 2,
+			"actionPoints": 5,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Devastating Axe",
+					"type": "Attack",
+					"range": "M2",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "[Bleed]"
+				},
+				{
+					"name": "Barbed Lash",
+					"type": "Attack",
+					"range": "R4",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "[Rooted]"
+				},
+				{
+					"name": "Stampede",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Move up to twice its speed directly toward a model. When it contacts an enemy, that model becomes stunned. [Regulated]"
+				},
+				{
+					"name": "Stomp",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Enemy models within 3 inches are stunned"
+				},
+				{
+					"name": "Endurance",
+					"type": "Static",
+					"value": "[Endurance]"
+				},
+				{
+					"name": "Thorns",
+					"type": "Static",
+					"value": "Enemy models that leave this models melee range suffer a Devesatating Axe attack."
+				}
+			]
+		},
+		{
+			"name": "Stitches",
+			"class": [
+				"Tank",
+				"DPS"
+			],
+			"attributes": [
+				"Immune to Critical Wounds"
+			],
+			"base": "80mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "When you crit on a consume attack role you may consume the model until the end of the round then place it base to base. If this model dies before the end of the round the consumed model is removed from play."
+			},
+			"speed": 4,
+			"defense": 11,
+			"health": 40,
+			"armor": 2,
+			"magicResist": 2,
+			"actionPoints": 6,
+			"recovery": 3,
+			"abilities": [
+				{
+					"name": "Meat Hook",
+					"type": "Attack",
+					"range": "R6",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "If this weapon hits an enemy model with equal or smaller base, the model is pushed b2b"
+				},
+				{
+					"name": "Rusted Axe",
+					"type": "Attack",
+					"range": "M2",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "Crit [Grievous Wounds]"
+				},
+				{
+					"name": "Monstrosity",
+					"type": "Static",
+					"value": "Models within 3 inches suffer [Fear]"
+				},
+				{
+					"name": "Consume",
+					"type": "Attack",
+					"range": "M1",
+					"damage": 6,
+					"cost": "1 AP",
+					"value": "If this weapon hits an enemy model with a smaller base it is consumed. At any point during the rest of this models activation you may place the consumed model base to base. Only 1 model can be consumed at any time."
+				},
+				{
+					"name": "Chop Shop",
+					"type": "Static",
+					"value": "When a model is killed within 3 inches heal 3"
+				},
+				{
+					"name": "Decaying Stinch",
+					"type": "Static",
+					"value": "Each time this model spends an AP, enemy models within 3 inches suffer 1 damage"
+				}
+			]
+		},
+		{
+			"name": "Quasar",
+			"class": [
+				"Support"
+			],
+			"attributes": [
+				"Stealth"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "When this model would take lethal damage instead it immediately goes to 1 HP and Phases. This model can immediately be placed within an Aberration Lens AOE."
+			},
+			"speed": 6,
+			"defense": 12,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 2,
+			"actionPoints": 6,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Recursion Rifle",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 6,
+					"cost": "1 AP",
+					"value": "If this weapon damages its target, It can attack the same target again with this weapon without spending AP. The ATK value of this weapon cannot be changed by any means."
+				},
+				{
+					"name": "Aberration Lens",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place a 4\" Lens AOE anywhere within 10\" of this model..."
+				},
+				{
+					"name": "Eclipse",
+					"type": "Spell",
+					"range": "R10",
+					"cost": "1 AP",
+					"value": "Target friendly model cannot be targeted by enemy ranged attacks."
+				},
+				{
+					"name": "Geodesic Anomoly",
+					"type": "Spell",
+					"cost": "2 AP",
+					"value": "You may swap the positions of any models within Aberration Lens AOE's."
+				},
+				{
+					"name": "Phase Shift",
+					"type": "Static",
+					"value": "This model can advance through obstructions and other models as long as it has enough movement to move completely past them."
+				}
+			]
+		},
+		{
+			"name": "Elora, the Time Weaver",
+			"class": [
+				"Support"
+			],
+			"attributes": [
+				"Immune to Slow"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "When a chrono shatter aura expires remove an activation token from a friendly model"
+			},
+			"speed": 4,
+			"defense": 12,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 2,
+			"actionPoints": 7,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Time Lock",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 5,
+					"cost": "1 AP",
+					"value": "[Innocuous]. When this weapon hits an enemy model that model suffers [Slow]. If this weapon hits an enemy model suffering from [Slow] the model suffers [Stun]."
+				},
+				{
+					"name": "Chrono-Shatter (Aura)",
+					"type": "Spell",
+					"range": "R12",
+					"cost": "2 AP",
+					"value": "When target friendly demigod would take lethal damage from an attack, instead it takes 0 damage and Chrono-Shatter expires. The model phases until the end of the activation."
+				},
+				{
+					"name": "Precognition (Aura)",
+					"type": "Spell",
+					"range": "R14",
+					"cost": "1 AP",
+					"value": "Target friendly model gains advantage"
+				},
+				{
+					"name": "Time Loop",
+					"type": "Static",
+					"value": "Enemy models within 10” of this model lose and can never gain advantage."
+				},
+				{
+					"name": "Slow Time",
+					"type": "Static",
+					"value": "Enemy models starting a move action within 10” suffer -1 SPD."
+				},
+				{
+					"name": "Bullet Dodger",
+					"type": "Static",
+					"value": "This model gains +5 DEF against ranged attacks."
+				}
+			]
+		},
+		{
+			"name": "Drak'Mol",
+			"class": [
+				"Support"
+			],
+			"attributes": [
+				"Undead (immune to bleed)"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "If this model starts an activation with at least 1 active curse it instantly recovers 5 AP"
+			},
+			"speed": 5,
+			"defense": 12,
+			"health": 25,
+			"armor": 0,
+			"magicResist": 3,
+			"actionPoints": 8,
+			"recovery": 3,
+			"abilities": [
+				{
+					"name": "Curse: Blessing of Blasphemy",
+					"type": "Spell",
+					"range": "R10",
+					"cost": "1 AP",
+					"value": "Target model is affected by 1 curse (-1 DEF) (-1 SPD) (-1 ATK)..."
+				},
+				{
+					"name": "Prayer - Unconsecrated Offering",
+					"type": "Spell",
+					"range": "R10",
+					"cost": "2 AP",
+					"value": "Place a prayer token on up to three target models within range..."
+				},
+				{
+					"name": "Unholy Rejuvenation",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Cleanse all status effects from freindly models within 5 inches of this model. This model suffers 1 damage for each status effect cleansed."
+				},
+				{
+					"name": "Penance",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "Heal friendly target model within 10 inches equal to the damage dealt."
+				},
+				{
+					"name": "Levitate",
+					"type": "Static",
+					"value": "This model can never become knocked down"
+				},
+				{
+					"name": "Dark Summons",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place this model anywhere within 8 inches. [Regulated]."
+				}
+			]
+		},
+		{
+			"name": "Essence",
+			"class": [
+				"Support"
+			],
+			"attributes": [
+				"Immunity: Rooted",
+				"Immunity: Knockdown"
+			],
+			"base": "50mm",
+			"threshold": {
+				"name": "Circle of Life",
+				"value": "[Restricted] at any point when a friendly demigod model dies, if the other player has more heros on the board than you, you may bring an unbanned demigod from outside the game and place it anywhere within 3 inches of Essence."
+			},
+			"speed": 6,
+			"defense": 14,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 0,
+			"actionPoints": 9,
+			"recovery": 5,
+			"abilities": [
+				{
+					"name": "Rejuvenation",
+					"type": "Spell",
+					"range": "R10",
+					"cost": "2 AP",
+					"value": "Heal target friendly model for 5 HP. If the target model is within 3 inches of a seedling heal for 8 HP instead."
+				},
+				{
+					"name": "Herbal Remedy (Aura-2)",
+					"type": "Spell",
+					"range": "R10",
+					"cost": "1 AP",
+					"value": "Target friendly model heals 1 HP at the start of every activation. If the target model is within 3 inches of a seedling heal for 2 HP instead."
+				},
+				{
+					"name": "Wrath of Mother Nature",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 5,
+					"cost": "1 AP",
+					"value": "When making an attack, roll an extra dice. If the target model is B2B with a seedling the attack gains [Rooted]."
+				},
+				{
+					"name": "Dreamcatcher",
+					"type": "Static",
+					"value": "Friendly models within 3 inches of this model or a seedling cannot become stunned, feared or dazed."
+				},
+				{
+					"name": "Overseeding",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place up to 3 seedling tokens within 8 inches of this model.There can be a maximum of 3 seedlings in play at any time."
+				},
+				{
+					"name": "Seedling Model",
+					"type": "Static",
+					"value": "This token is a 50mm friendly model with SPD 0 DEF 10 HP 5 AR 0 MR 0 and blocks line of sight and cannot be pushed or placed."
+				},
+				{
+					"name": "Barkskin",
+					"type": "Static",
+					"value": "This model has [Impervious 2]"
+				}
+			]
+		},
+		{
+			"name": "Cybin Gen",
+			"class": [
+				"Support"
+			],
+			"attributes": [
+				"Immune to Poison & Stun",
+				"Shroom"
+			],
+			"base": "65mm",
+			"threshold": {
+				"name": "Threshold",
+				"value": "If this model would be damaged and has a shroom token in play, it may immedietely switch places with a shroom token and take 0 damage. Then remove the shroom token from play."
+			},
+			"speed": 4,
+			"defense": 13,
+			"health": 20,
+			"armor": 0,
+			"magicResist": 2,
+			"actionPoints": 7,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Fungal Network",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Choose a shroom model within 8” of this model and replace it with this model."
+				},
+				{
+					"name": "Fungal Reach",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Place up to 3 Shroom Models completely within 8 inches of this model.There can be a maximum of 3 shroom models in play at any time."
+				},
+				{
+					"name": "Healing Spores",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Heal 3 DMG from a friendly model within 3 inches of a shroom model."
+				},
+				{
+					"name": "Induced Transcendence Aura",
+					"type": "Spell",
+					"range": "R10",
+					"damage": 6,
+					"cost": "2 AP",
+					"value": "[Innocuous]. The enemy model hit suffers [Stun]."
+				},
+				{
+					"name": "Cleanse",
+					"type": "Spell",
+					"cost": "1 AP",
+					"value": "Remove all enemy auras from models within 3\" of this model."
+				},
+				{
+					"name": "Shroom Model",
+					"type": "Static",
+					"value": "This token is a 50mm friendly model with SPD 0 DEF 10 HP 5 AR 0 MR 0 and has Fungus Among Us -When a friendly model activates within 3\" of this model you may give the friendly model 1 AP and remove this model from play."
+				},
+				{
+					"name": "Psychotropic Spores",
+					"type": "Static",
+					"value": "When this model is hit with a melee attack by a enemy model, after the attack is resolved place an activation token on the enemy model."
+				}
+			]
+		},
+		{
+			"name": "Ashera",
+			"class": [
+				"Support"
+			],
+			"attributes": [
+				"Flying",
+				"Immune to Poison & Pierce"
+			],
+			"base": "65mm",
+			"threshold": {
+				"name": "Lifeline",
+				"value": "If a friendly demigod within 10\" of this model would take lethal damage you may place this model B2B with it. When you do the friendly model is not destroyed and immediately heals 5HP."
+			},
+			"speed": 7,
+			"defense": 14,
+			"health": 20,
+			"armor": 2,
+			"magicResist": 2,
+			"actionPoints": 7,
+			"recovery": 4,
+			"abilities": [
+				{
+					"name": "Venom Rifle",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "[Innocuous]. [Poison]"
+				},
+				{
+					"name": "Energy Pulse",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 7,
+					"cost": "1 AP",
+					"value": "[Innocuous]. This attack automatically hits friendly models. Remove Aura on target model."
+				},
+				{
+					"name": "Charge Rifle",
+					"type": "Attack",
+					"range": "R10",
+					"damage": 8,
+					"cost": "1 AP",
+					"value": "Friendly models hit heal 3 HP and enemy models hit suffer 3 damage. This attack automatically hits friendly models."
+				},
+				{
+					"name": "Nano-Chitinous ExoShield",
+					"type": "Spell",
+					"cost": "2 AP",
+					"value": "Friendly models within 5\" of this model have [Impervious 1]."
+				},
+				{
+					"name": "Symbiosis",
+					"type": "Static",
+					"value": "When a friendly model is base to base with this model they share health pools and it may spend this models AP for Class Advantages"
+				},
+				{
+					"name": "Firefly",
+					"type": "Static",
+					"value": "This model has [Evade 3]."
+				},
+				{
+					"name": "Firefly",
+					"type": "Static",
+					"value": "This model has [Evade 3]."
+				},
+				{
+					"name": "Toxins",
+					"type": "Static",
+					"value": "When this model crits, all enemy models within 10 inches with [Poison] suffer 3 damage."
+				}
+			]
+		},
+		{
+			"name": "Hydra",
+			"class": [
+				"TITAN"
+			],
+			"attributes": [
+				"Titan",
+				"Neutral"
+			],
+			"base": "120mm",
+			"speed": 0,
+			"defense": 10,
+			"health": 60,
+			"armor": 2,
+			"magicResist": 1,
+			"actionPoints": 0,
+			"recovery": 0,
+			"slayingReward": "Slaying this monster rewards 2 VP and gives your team immunity status effects for the rest of the game.",
+			"abilities": [
+				{
+					"name": "Bite",
+					"type": "Attack",
+					"rollRange": "1-2",
+					"value": "This model makes an ATK 12 against the 4 nearest models within 6 inches"
+				},
+				{
+					"name": "Acid spray",
+					"type": "Attack",
+					"rollRange": "3-4",
+					"value": "Every model within 6 inches takes an ATK 10 and suffers the poison effect"
+				},
+				{
+					"name": "Tremor",
+					"type": "Attack",
+					"rollRange": "5-6",
+					"value": "Every model within 6 inches is knocked down"
+				}
+			]
+		},
+		{
+			"name": "Goat Demon",
+			"class": [
+				"TITAN"
+			],
+			"attributes": [
+				"Titan",
+				"Neutral"
+			],
+			"base": "120mm",
+			"speed": 0,
+			"defense": 6,
+			"health": 65,
+			"armor": 6,
+			"magicResist": 2,
+			"actionPoints": 0,
+			"recovery": 0,
+			"slayingReward": "Slaying this monster rewards 2 VP and you may ressurect a hero at half Health rounded up with no activation token and full AP.",
+			"abilities": [
+				{
+					"name": "Chain strike",
+					"type": "Attack",
+					"rollRange": "1-2",
+					"value": "This model makes an ATK 12 against the 2 nearest models within 12 inches"
+				},
+				{
+					"name": "Scorched Earth",
+					"type": "Static",
+					"rollRange": "3-4",
+					"value": "Remove all non hero obstructions within 10 inches"
+				},
+				{
+					"name": "Covered in ashe",
+					"type": "Static",
+					"rollRange": "5-6",
+					"value": "Models within 10 inches gain concealment"
+				}
+			]
+		},
+		{
+			"name": "Succubus",
+			"class": [
+				"TITAN"
+			],
+			"attributes": [
+				"Titan",
+				"Neutral"
+			],
+			"base": "120mm",
+			"speed": 0,
+			"defense": 12,
+			"health": 55,
+			"armor": 1,
+			"magicResist": 3,
+			"actionPoints": 0,
+			"recovery": 0,
+			"slayingReward": "Slaying this monster rewards 2 VP and removes 2 activation tokens from your team",
+			"abilities": [
+				{
+					"name": "False hope",
+					"type": "Spell",
+					"rollRange": "1-2",
+					"value": "2 nearest models within 10 inches heal 10"
+				},
+				{
+					"name": "Scorned",
+					"type": "Spell",
+					"rollRange": "3-4",
+					"value": "This model makes a magical ATK 10 against every model within 10 inches"
+				},
+				{
+					"name": "Seduce",
+					"type": "Spell",
+					"rollRange": "5-6",
+					"value": "2 nearest models within 10 inches each make a basic atk against each other"
+				}
+			]
+		},
+		{
+			"name": "Demon Hound",
+			"class": [
+				"TITAN"
+			],
+			"attributes": [
+				"Titan",
+				"Neutral"
+			],
+			"base": "120mm",
+			"speed": 0,
+			"defense": 10,
+			"health": 60,
+			"armor": 2,
+			"magicResist": 2,
+			"actionPoints": 0,
+			"recovery": 0,
+			"slayingReward": "Slaying this monster rewards 2 VP and your team gains grievous wounds for the rest of the game.",
+			"abilities": [
+				{
+					"name": "Claw",
+					"type": "Attack",
+					"rollRange": "1-2",
+					"value": "Makes an ATK 13 against the 2 nearest models within 6 inches"
+				},
+				{
+					"name": "Bite",
+					"type": "Attack",
+					"rollRange": "3-4",
+					"value": "Makes an ATK 10 against the nearest model within 6 inches and it suffers CW"
+				},
+				{
+					"name": "Rawr",
+					"type": "Static",
+					"rollRange": "5-6",
+					"value": "Every model within 6 inches suffers fear"
+				}
+			]
+		},
+		{
+			"name": "Kraken Lord",
+			"class": [
+				"TITAN"
+			],
+			"attributes": [
+				"Titan",
+				"Neutral"
+			],
+			"base": "120mm",
+			"speed": 0,
+			"defense": 10,
+			"health": 60,
+			"armor": 2,
+			"magicResist": 1,
+			"actionPoints": 0,
+			"recovery": 0,
+			"slayingReward": "Slaying this monster rewards 2 VP and your team gains +1 REC for the rest fo the game.",
+			"abilities": [
+				{
+					"name": "Tentacles",
+					"type": "Attack",
+					"rollRange": "1-2",
+					"value": "Models within 8 inches are rooted."
+				},
+				{
+					"name": "High Tide",
+					"type": "Attack",
+					"rollRange": "3-4",
+					"value": "Models within 8 inches take an ATK 13"
+				},
+				{
+					"name": "Flash Flood",
+					"type": "Spell",
+					"rollRange": "5-6",
+					"value": "Models within 8 inches lose an AP"
+				}
+			]
+		},
+		{
+			"name": "Archangel",
+			"class": [
+				"TITAN"
+			],
+			"attributes": [
+				"Titan",
+				"Neutral"
+			],
+			"base": "120mm",
+			"speed": 0,
+			"defense": 10,
+			"health": 40,
+			"armor": 1,
+			"magicResist": 3,
+			"actionPoints": 0,
+			"recovery": 0,
+			"slayingReward": "Slaying this monster rewards 2 VP and phase a model until the end of the round.",
+			"abilities": [
+				{
+					"name": "Angelic touch",
+					"type": "Spell",
+					"rollRange": "1-2",
+					"value": "Models within 10 inches suffer a magical ATK 10"
+				},
+				{
+					"name": "Regeneration",
+					"type": "Spell",
+					"rollRange": "3-4",
+					"value": "This model heals 3D6"
+				},
+				{
+					"name": "Banishing",
+					"type": "Spell",
+					"rollRange": "5-6",
+					"value": "The two nearest demigods within 10 inches are phased out until the end of the round. Effects placed by these heroes dont fall off."
+				}
+			]
+		}
+	]
+}

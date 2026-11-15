@@ -1,0 +1,152 @@
+{
+	"glossary": [
+		{
+			"term": "Fear",
+			"description": "-1 ATK",
+			"power": 2
+		},
+		{
+			"term": "Bleed",
+			"description": "(+)1 (M)ATK",
+			"power": 1
+		},
+		{
+			"term": "Daze",
+			"description": "Attacks against dazed models have advantage.",
+			"power": 3
+		},
+		{
+			"term": "Pierce",
+			"description": "Ignores Armor (AR).",
+			"power": 2
+		},
+		{
+			"term": "Dark Magic",
+			"description": "Ignores Magic Resist (MR)."
+		},
+		{
+			"term": "Poison",
+			"description": "DOTS 3 damage / round.",
+			"power": 1
+		},
+		{
+			"term": "Knockdown",
+			"description": "Must spend 1 AP to stand up.",
+			"power": 3
+		},
+		{
+			"term": "Slow",
+			"description": "-1 Speed (SPD).",
+			"power": 1
+		},
+		{
+			"term": "Stun",
+			"description": "When this model spends AP increase the amount spent by 1.",
+			"power": 2
+		},
+		{
+			"term": "Stagger",
+			"description": "Disadvantage on ATK."
+		},
+		{
+			"term": "Grievous Wounds",
+			"description": "Cannot heal.",
+			"power": 1
+		},
+		{
+			"term": "Explode",
+			"description": "Models within target range take a damage roll."
+		},
+		{
+			"term": "Rooted",
+			"description": "No moves permitted.",
+			"power": 2
+		},
+		{
+			"term": "Fracture",
+			"description": "-1 Armor (AR).",
+			"power": 1
+		},
+		{
+			"term": "Silence",
+			"description": "Cannot cast spells.",
+			"power": 2
+		},
+		{
+			"term": "Brutal",
+			"description": "Damage from this attack is doubled against the target."
+		},
+		{
+			"term": "Bodyguard",
+			"description": "When a friendly model within 2\" of this model is directly hit by an enemy ranged attack, you can choose to have this model directly hit instead."
+		},
+		{
+			"term": "Regulated",
+			"description": "Can only be used once per round."
+		},
+		{
+			"term": "Restricted",
+			"description": "Can only be used once per game."
+		},
+		{
+			"term": "Taunt",
+			"description": "When a model activates within melee range of an enemy demigod with taunt, the taunted model must first make an attack against that model."
+		},
+		{
+			"term": "Innocuous",
+			"description": "This attack deals no damage."
+		},
+		{
+			"term": "Ricochet",
+			"description": "On hit, the nearest X enemy models within 3 inches take an attack roll equal to the original attack against their base DEF."
+		},
+		{
+			"term": "Anchored",
+			"description": "This model cannot be knocked down, moved, or placed by an enemy model."
+		},
+		{
+			"term": "Impervious",
+			"description": "All damage reduced by X."
+		},
+		{
+			"term": "Evade",
+			"description": "If this model is missed by an enemy attack, it can advance up to X."
+		},
+		{
+			"term": "Vengeance",
+			"description": "Once per round when this model is hit by an enemy melee attack, after the attack is resolved this model can make an attack against that model."
+		},
+		{
+			"term": "Onslaught",
+			"description": "When this model is damaged by an enemy attack, it can immediately make a full advance directly toward the attacking model."
+		},
+		{
+			"term": "Endurance",
+			"description": "Healing is doubled."
+		},
+		{
+			"term": "Bull Rush",
+			"description": "A model with Bull Rush can move up to twice its speed directly toward a model. When it contacts the enemy, that model becomes Stunned."
+		},
+		{
+			"term": "Sentry",
+			"description": "When an enemy model ends their movement within range of a weapon with Sentry, you may make one attack with this weapon against that model."
+		},
+		{
+			"term": "Stealth",
+			"description": "Spell and Ranged attacks against this model are at disadvantage."
+		},
+		{
+			"term": "Shake",
+			"description": "Support Class Action: Class Advantages cost 1 AP for the appropriate class, but 2 for everyone else."
+		},
+		{
+			"term": "Brace",
+			"description": "Tank Class Action."
+		},
+		{
+			"term": "Empower",
+			"description": "DPS Class Action."
+		}
+	]
+}

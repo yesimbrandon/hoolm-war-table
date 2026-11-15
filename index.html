@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HOOLM War Table — A 2D top-down tabletop game for Heroes of the Overleague with deployment zones, model tracking, dice rolling, and more." />
+  <title>HOOLM War Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Setup Screen (shown first, hidden once game starts) -->
+  <div id="setup-screen"></div>
+
+  <!-- Game Container (hidden until game starts) -->
+  <div id="game-container" class="hidden">
+    <!-- Top Toolbar -->
+    <header id="toolbar">
+      <div class="toolbar-left">
+        <h1 class="toolbar-title">HOOLM War Table</h1>
+        <span id="round-display" class="toolbar-badge">Round 1</span>
+      </div>
+      <div class="toolbar-center">
+        <div class="vp-tracker">
+          <span class="vp-label vp-p1">P1: <span id="vp-p1">0</span> VP</span>
+          <span class="vp-divider">|</span>
+          <span class="vp-label vp-p2">P2: <span id="vp-p2">0</span> VP</span>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button id="btn-dice" class="toolbar-btn" title="Roll Dice (or press 1-9)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="17" cy="17" r="1.5" fill="currentColor"/></svg>
+        </button>
+        <button id="btn-next-round" class="toolbar-btn" title="Next Round">Next Round ▶</button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div id="main-area">
+      <!-- Canvas Board -->
+      <div id="board-wrapper">
+        <canvas id="game-board"></canvas>
+        <!-- Movement confirm/cancel overlay (positioned dynamically) -->
+        <div id="move-confirm" class="hidden">
+          <button id="move-confirm-yes" class="move-btn move-yes" title="Confirm Move">✓</button>
+          <button id="move-confirm-no" class="move-btn move-no" title="Cancel Move">✗</button>
+        </div>
+        <!-- Distance label (positioned dynamically) -->
+        <div id="move-distance-label" class="hidden">0.0"</div>
+      </div>
+
+      <!-- Side Panel -->
+      <aside id="side-panel" class="panel-closed">
+        <div id="panel-content">
+          <div id="panel-placeholder">
+            <p>Select a model on the board to inspect</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Dice Overlay -->
+    <div id="dice-overlay" class="hidden"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
